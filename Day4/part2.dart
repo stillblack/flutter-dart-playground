@@ -7,6 +7,7 @@ void main() {
   intro('Gorgan');
   int result = getGreater(45, 67);
   print(result);
+  number(12);
 
   String checkPerson = getAgeStatus(55);
   print(checkPerson);
@@ -44,5 +45,11 @@ String getAgeStatus(int a) {
     return 'Adult';
   } else {
     return 'Minor';
+  }
+}
+
+void number(int a) {
+  for (int i = 1; i <= a; i++) {
+    print(i);
   }
 }
