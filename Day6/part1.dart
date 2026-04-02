@@ -5,6 +5,10 @@ void main() {
 
   print('$listOfSeniorDevelopers \n');
 
+
+  for (var i in checkAges) {
+    print('${i['name']} \n ');
+  }
   //   if (checkAges['age'] >=18) {
   //   print('${checkAges['name']} is mature enough to vote');
   // }
