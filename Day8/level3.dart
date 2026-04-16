@@ -1,29 +1,28 @@
 void main() {
-  for (Map i in students) {
-    if (i['isActive'] == true) {
-      print('${i['name']} is active');
-    } else {
-      print('${i['name']} is not active');
+  for (Map i in emails) {
+    if (i['email'].contains('@') && i['email'].contains('.com')) {
+      print('${i['email']} is valid email');
     }
   }
-  print('\n ');
-  // part 2
-  for (Map i in students) {
-    if (i['isActive'] == true && i['age'] >= 18) {
-      print('${i['name']} is active and allowed to enter');
+  print('\n');
+  for (Map i in Data) {
+    if (i['name'].trim().isNotEmpty) {
+      print('${i['name']} is valid cleared name');
     } else {
-      print('${i['name']} is not active or not allowed to enter');
+      print('${i['name']} is not valid cleared name');
     }
-  }
-  print(' \n');
-  for (Map i in students) {
-    if (i['isActive'] == false || i['age'] < 18) {}
-    print('${i['name']} is not active or not allowed to enter');
   }
 }
 
-List<Map<String, dynamic>> students = [
-  {'name': 'ali', 'age': 18, 'isActive': true},
-  {'name': 'ahmed', 'age': 22, 'isActive': false},
-  {'name': 'sara', 'age': 19, 'isActive': true},
+List<Map<String, String>> emails = [
+  {'email': 'stillblack2014@gmail.com'},
+  {'email': 'laiejaz1011@gmail.com'},
+  {'email': 'gorgan0067@gmail.com'},
+  {'email': 'anotheremail@gmail'},
+];
+
+List<Map<String, String>> Data = [
+  {'name': 'ALi'},
+  {'name': '  '},
+  {'name': 'Sara'},
 ];
