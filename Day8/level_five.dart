@@ -11,13 +11,14 @@ void main() {
   for (Map i in APIData) {
     if (i['price'] > 50000) {
       print('${i['title']} is expensive');
-    } else {
-      print('${i['title']} is Cheap');
+    }
+    if (i['price'] < 1000) {
+      print('${i['title']} is cheap');
     }
   }
   print('\n');
-  for (Map i in Data){
-    if(i['name'].trim().isNotEmpty && i['age']>=18){
+  for (Map i in Data) {
+    if (i['name'].trim().isNotEmpty && i['age'] >= 18) {
       print('${i['name']} is  valid  and age is ${i['age']}');
     }
   }
