@@ -1,5 +1,3 @@
-import '../Day5/level3.dart';
-
 void main() {
   print(user);
   print('\n');
@@ -12,11 +10,12 @@ List<Map<String, dynamic>> user = [
   {"name": "Charlie", "age": 35},
 ];
 
-int getUserAge() {
+List<Map<String, dynamic>> getUserAge() {
+  List<Map<String, dynamic>> result = [];
   for (var i in user) {
     if (i['age'] >= 18) {
-      return i['name'];
+      result.add(i);
     }
   }
-  return 0; // Return 0 if no user is found with age >= 18}
+  return result;
 }
