@@ -8,6 +8,8 @@ void main() {
   print(checkMail(email));
   print('\n');
   print(expensivePrdocts(product));
+  print('\n');
+  print(validNames(users));
 }
 
 // Levle one
@@ -96,4 +98,27 @@ List<Map<String, dynamic>> expensivePrdocts(
     }
   }
   return result;
+}
+
+// Task five
+List<Map<String, dynamic>> users = [
+  {'name': 'ejaz gorgan'},
+  {'name': ''},
+  {'name': '   ali '},
+  {'name': ' haider '},
+  {'name': '  azfar  '},
+];
+
+List<String> validNames(List<Map<String, dynamic>> users) {
+  List<String> output = [];
+
+  for (var i in users) {
+    String e = i['name'] ?? '';
+
+    if (e.trim().isNotEmpty) {
+      output.add(e.trim());
+    }
+  }
+
+  return output;
 }
