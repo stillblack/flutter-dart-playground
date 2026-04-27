@@ -4,6 +4,8 @@ void main() {
   print(getUserAge());
   print('\n');
   print(countAdmin(details));
+  print('\n');
+  print(checkMail(email));
 }
 
 // Levle one
@@ -38,4 +40,38 @@ int countAdmin(List details) {
     }
   }
   return count;
+}
+// Check emails
+
+List<Map<String, dynamic>> email = [
+  {'email': 'alice@example.com'},
+  {'email': 'bobexample.com'},
+  {'email': 'charlie@example.com'},
+  {'email': 'david@example.com'},
+  {'email': ''},
+];
+
+// bool checkMail(List<Map<String, dynamic>> email) {
+//   List<bool> result = [];
+//   for (var i in email) {
+//     String e = i['email'] ?? '';
+//     if (e.contains('@') && e.trim().isNotEmpty && e.contains('.com')) {
+//        result.add(true);
+//     }
+//   }
+//   result.add(false);
+//   // return ;
+// }
+List<bool> checkMail(List<Map<String, dynamic>> emails) {
+  List<bool> results = [];
+
+  for (var i in emails) {
+    String e = i['email'] ?? '';
+
+    bool isValid = e.contains('@') && e.contains('.com') && e.trim().isNotEmpty;
+
+    results.add(isValid);
+  }
+
+  return results;
 }
