@@ -6,6 +6,8 @@ void main() {
   print(countAdmin(details));
   print('\n');
   print(checkMail(email));
+  print('\n');
+  print(expensivePrdocts(product));
 }
 
 // Levle one
@@ -74,4 +76,24 @@ List<bool> checkMail(List<Map<String, dynamic>> emails) {
   }
 
   return results;
+}
+
+//  Task four
+List<Map<String, dynamic>> product = [
+  {'name': 'phone', 'price': 50000},
+  {'name': 'soaf', 'price': 500},
+  {'name': 'keyboard', 'price': 5000},
+  {'name': 'laptop', 'price': 150000},
+];
+
+List<Map<String, dynamic>> expensivePrdocts(
+  List<Map<String, dynamic>> product,
+) {
+  List<Map<String, dynamic>> result = [];
+  for (var i in product) {
+    if (i['price'] > 5000) {
+      result.add(i);
+    }
+  }
+  return result;
 }
