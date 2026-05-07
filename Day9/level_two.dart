@@ -14,6 +14,20 @@ void main() {
       print({searchName});
     }
   }
+  print('part 3 \n');
+  // List<Map<String, dynamic>> user2Filtered = [];
+  for (var i in user2) {
+    if (i['marks'] < 50) {
+      // user2Filtered.add(i['name']);
+      print('${i['name']}\ you are failed');
+      // print('failed');
+    } else if (i['marks'] >= 40 && i['marks'] <= 80) {
+      print('${i['name']}\ you are pass');
+    } else {
+      print('${i['name']} \ you are the topper');
+    }
+  }
+  // print(user2Filtered);
 }
 
 List<Map<String, dynamic>> data = [
@@ -27,4 +41,10 @@ List<Map<String, dynamic>> user1 = [
   {'name': "Ahmed"},
   {'name': "Sara"},
   {'name': "Ayesha"},
+];
+List<Map<String, dynamic>> user2 = [
+  {'name': "Ali", 'marks': 35},
+  {'name': "Sara", 'marks': 75},
+  {'name': "Ahmed", 'marks': 90},
+  {'name': "John", 'marks': 60},
 ];
