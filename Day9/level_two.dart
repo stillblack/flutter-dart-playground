@@ -1,3 +1,5 @@
+import 'level_one.dart';
+
 void main() {
   print('level two \n');
 
@@ -33,6 +35,28 @@ void main() {
       print('Total Price :${i['price'] * i['qty']}');
     }
   }
+  print('part 5 \n');
+  for (var i in users) {
+    if (i['role'] == 'admin' && i['active'] == true) {
+      print('active admin : ${i['name']}');
+    }
+  }
+  print('part 6 \n');
+  for (var i in email) {
+    String mail = i['email'].trim();
+    if (mail.contains('@') && mail.contains('.com')) {
+      print('valid email  : $mail');
+    }
+  }
+  print('part 7 \n ');
+  List<Map<String, dynamic>> validUser = [];
+  for (var i in address) {
+    String name = i['name'].trim();
+    if (name.isNotEmpty && i['age'] >= 18 && i['city'] == 'Lahore') {
+      i['name'] = name;
+      print(i);
+    }
+  }
 }
 
 List<Map<String, dynamic>> data = [
@@ -58,4 +82,20 @@ List<Map<String, dynamic>> qty = [
   {'price': 1000, 'qty': 2},
   {'price': 500, 'qty': 0},
   {'price': 2000, 'qty': 3},
+];
+List<Map<String, dynamic>> users = [
+  {'name': "Ali", 'role': "admin", 'active': true},
+  {'name': "Ahmed", 'role': "user", 'active': false},
+  {'name': "Sara", 'role': "admin", 'active': true},
+];
+List<Map<String, dynamic>> email = [
+  {'email': " ali@gmail.com "},
+  {'email': "ahmedgmail.com"},
+  {'email': " sara@gmail.com "},
+];
+List<Map<String, dynamic>> address = [
+  {'name': "   Ali   ", 'age': 22, 'city': "Lahore"},
+  {'name': "Ahmed", 'age': 17, 'city': "Karachi"},
+  {'name': "   ", 'age': 25, 'city': "Lahore"},
+  {'name': "Sara", 'age': 19, 'city': "Lahore"},
 ];
