@@ -54,9 +54,11 @@ void main() {
     String name = i['name'].trim();
     if (name.isNotEmpty && i['age'] >= 18 && i['city'] == 'Lahore') {
       i['name'] = name;
-      print(i);
+      validUser.add(i);
+      // print(i);
     }
   }
+  print(validUser);
 }
 
 List<Map<String, dynamic>> data = [
