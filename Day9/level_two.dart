@@ -27,7 +27,12 @@ void main() {
       print('${i['name']} \ you are the topper');
     }
   }
-  // print(user2Filtered);
+  print('part 4 \n');
+  for (var i in qty) {
+    if (i['qty'] > 0) {
+      print('Total Price :${i['price'] * i['qty']}');
+    }
+  }
 }
 
 List<Map<String, dynamic>> data = [
@@ -47,4 +52,10 @@ List<Map<String, dynamic>> user2 = [
   {'name': "Sara", 'marks': 75},
   {'name': "Ahmed", 'marks': 90},
   {'name': "John", 'marks': 60},
+];
+
+List<Map<String, dynamic>> qty = [
+  {'price': 1000, 'qty': 2},
+  {'price': 500, 'qty': 0},
+  {'price': 2000, 'qty': 3},
 ];
