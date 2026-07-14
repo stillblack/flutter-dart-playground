@@ -1,15 +1,11 @@
 void main() {
-  int learn = 3;
+  try {
+    print('program started');
+    int result = 10 ~/ 0;
 
-  int num = 7;
-  int score = 70;
-  if (score >= 60 && score == 70) {
-    print('you are qualified');
-  } else {
-    print('sorry you are failed');
+    print(result);
+  } catch (e) {
+    print('an error occured');
   }
-  print('\n');
-  for (int i = 0; i <= num; i++) print(i);
-  print('\n');
-  for (int i = 0; i == learn; i++) print('love');
+  print('program ended');
 }
